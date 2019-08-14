@@ -1,0 +1,16 @@
+[
+{
+  "modid": "wynnpartyframes",
+  "name": "Wynn Party Frames",
+  "description": "A Client-side mod to add party frames to Wynncraft",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Zachary Higgs"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
