@@ -11,11 +11,11 @@ import org.apache.logging.log4j.Logger;
 
 
 
-@Mod(modid = "wynnpartyframes", version = "1.0.1", useMetadata = true)
+@Mod(modid = "wynnpartyframes", version = "1.0.2", useMetadata = true)
 public class Partyframes {
     public static final String MODID = "wynnpartyframes";
     public static final String NAME = "Wynn Partyframes";
-    public static final String VERSION = "1.0.1";
+    public static final String VERSION = "1.0.2";
 
 
     public static Logger logger;

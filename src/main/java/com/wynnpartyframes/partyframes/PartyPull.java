@@ -17,18 +17,12 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public class PartyPull extends Gui {
-    public static <R> Predicate<R> not(Predicate<R> predicate) {
-        return predicate.negate();
-    }
+public class PartyPull {
+
     public PartyPull(Minecraft mc){
 
         List<String> PlayerList = null;
         List<String> PartyList = new ArrayList<>();
-        ScaledResolution scaled;
-        scaled = new ScaledResolution(mc);
-        int width = scaled.getScaledWidth();
-        int height = scaled.getScaledHeight();
 
         List<EntityPlayer> PartyEntities = new ArrayList<>();
         //Get Taboverlay
@@ -52,28 +46,8 @@ public class PartyPull extends Gui {
                 }
             }
         }
-        //Add Get all player entities
-        for (String player : PartyList) {
-            PartyEntities.add(mc.world.getPlayerEntityByName(player));
-        }
 
-            int row = 0;
-            for(int i = 0; i < PartyList.size(); i++){
-                String name = PartyList.get(i);
-                String health = "";
-                String mana = "";
-                if(PartyEntities.get(i) != null){
-                    health = String.valueOf(PartyEntities.get(i).getHealth());
-                    mana = String.valueOf(PartyEntities.get(i).getFoodStats().getFoodLevel());
-                } else {
-                    health = "Out of render range";
-                }
-                drawString(mc.fontRenderer, name, width / PartyframesConfig.PartyframesX, (height / PartyframesConfig.PartyFramesY)+(row*22), Integer.parseInt("FFFFFF", 16));
-                drawString(mc.fontRenderer, health, width / PartyframesConfig.PartyframesX, (height / PartyframesConfig.PartyFramesY)+(row*22)+8, Integer.parseInt("FF5555", 16));
-                //drawString(mc.fontRenderer, mana, width / PartyframesConfig.PartyframesX, (height / PartyframesConfig.PartyFramesY)+(row*22)+16, Integer.parseInt("5555FF", 16));
-                row++;
-            }
-
-
+        //Spawn the GUI
+        new PartyGui(mc, PartyList);
     }
 }
