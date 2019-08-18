@@ -43,7 +43,7 @@ public class DebugGUI extends Gui {
 
              PlayerList = playerInfoMap.stream().map(tabOverlay::getPlayerName).collect(Collectors.toList());
              PlayerList.removeIf(n -> n.equals(""));
-             Partyframes.logger.info(PlayerList);
+            // Partyframes.logger.info(PlayerList);
         }
         if(PlayerList != null) {
             int row = 0;

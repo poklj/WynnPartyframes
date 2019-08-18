@@ -20,5 +20,5 @@ public class PartyframesConfig {
 
     })
     @RangeInt(min=-5, max=5)
-    public static int PartyFramesY = 3;
+    public static int PartyframesY = 3;
 }
