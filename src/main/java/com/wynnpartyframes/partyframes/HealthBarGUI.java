@@ -24,13 +24,11 @@ public class HealthBarGUI extends Gui {
         //Translate from the black bar to required point
         GL11.glTranslatef(1,1,0);
         if(player != null) {
-            Partyframes.logger.info("Rendering Inrange");
             double health = player.getHealth();
             double maxHealth = player.getMaxHealth();
             double healthPercentage = (health / maxHealth);
             drawRect(0, 0, (int) Math.round(70*healthPercentage), 10, 0xFFFF5555);
         } else {
-            Partyframes.logger.info("Rendering OutOfRange");
             drawRect(0, 0, 70,  10, 0xFF808080);
         }
         GL11.glPopMatrix();
