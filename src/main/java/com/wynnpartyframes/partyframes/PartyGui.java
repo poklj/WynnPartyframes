@@ -36,20 +36,9 @@ public class PartyGui extends Gui {
             row++;
         }
         */
-
-        for(int i = 0; i < PartyList.size(); i++){
-            if(PartyframesConfig.PartyframesX != 0 && PartyframesConfig.PartyframesY != 0)
-                new FrameOriginGUI(mc, PartyEntities.get(i),PartyList.get(i),width / PartyframesConfig.PartyframesX, (height / PartyframesConfig.PartyframesY)+(row*22));
-            else if(PartyframesConfig.PartyframesX == 0)
-                new FrameOriginGUI(mc, PartyEntities.get(i),PartyList.get(i),width, (height / PartyframesConfig.PartyframesY)+(row*22));
-            else if(PartyframesConfig.PartyframesY == 0)
-                new FrameOriginGUI(mc, PartyEntities.get(i),PartyList.get(i),width / PartyframesConfig.PartyframesX, (height)+(row*22));
-            else
-                new FrameOriginGUI(mc, PartyEntities.get(i),PartyList.get(i),width, (height)+(row*22));
+        for(int i = 0; i < PartyList.size(); i++) {
+            new FrameOriginGUI(mc, PartyEntities.get(i), PartyList.get(i), (width / (PartyframesConfig.PartyframesX)) + PartyframesConfig.PartyframesXOffset, ((height / PartyframesConfig.PartyframesY)+ PartyframesConfig.PartyframesYOffset) + (row * 22));
             row++;
         }
-
-
-
     }
 }

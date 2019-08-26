@@ -20,8 +20,5 @@ public class FrameOriginGUI {
         new HealthBarGUI(mc, player, x, y+10);
         //Todo: figure out how to make this optional
         new HealthPercentageGUI(mc, player, x, y+10);
-
-
-
     }
 }
