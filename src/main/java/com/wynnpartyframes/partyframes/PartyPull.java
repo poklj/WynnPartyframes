@@ -33,8 +33,11 @@ public class PartyPull {
 
             PlayerList = playerInfoMap.stream().map(tabOverlay::getPlayerName).collect(Collectors.toList());
             PlayerList.removeIf(n -> n.equals(""));
-            for(String player : PlayerList){
 
+
+            //TODO: Figure out if this supports long playernames
+            //TODO: Convert these to proper UNICODE checks, possibly using regex or maybe some other matching solution.
+            for(String player : PlayerList){
                 if (!player.contains("Party")) {
                     if((player.charAt(1) == 'c' && player.charAt(2) != '[') && player.endsWith("r")){
                         StringBuilder sb = new StringBuilder(player.trim());
@@ -48,6 +51,9 @@ public class PartyPull {
         }
 
         //Spawn the GUI
-        new PartyGui(mc, PartyList);
+        try{
+            new PartyGui(mc, PartyList);
+        } catch (Exception e){}
+
     }
 }

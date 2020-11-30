@@ -1,9 +1,12 @@
 package com.wynnpartyframes.partyframes;
 
 import ibxm.Player;
+import me.bed0.jWynn.WynncraftAPI;
+import me.bed0.jWynn.api.v2.player.WynncraftPlayer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.entity.player.EntityPlayer;
+
 
 public class PlayerNameGUI extends Gui {
     /**
@@ -13,7 +16,15 @@ public class PlayerNameGUI extends Gui {
      * @param x X position
      * @param y Y Position
      */
-    public PlayerNameGUI(Minecraft mc, String playerName, int x, int y){
-        drawString(mc.fontRenderer, playerName,x, y, Integer.parseInt("FFFFFF", 16));
+    public PlayerNameGUI(Minecraft mc, WynncraftPlayer wp, String playerName, int x, int y){
+        String DisplayString = "";
+        //Toggle if you should display total levels.
+        if(PartyframesConfig.TotalLevel){
+            if (wp != null) {
+                DisplayString += wp.getGlobal().getTotalLevel().getCombat() + "| ";
+            }
+        }
+        DisplayString += playerName;
+        drawString(mc.fontRenderer, DisplayString,x, y, Integer.parseInt("FFFFFF", 16));
     }
 }

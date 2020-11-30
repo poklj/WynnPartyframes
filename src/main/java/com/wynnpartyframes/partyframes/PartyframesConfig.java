@@ -3,10 +3,13 @@ package com.wynnpartyframes.partyframes;
 import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.Config.RangeInt;
 
+
 @SuppressWarnings("WeakerAccess")
 @Config(modid="wynnpartyframes", name="WynnPartyframesConfig")
 public class PartyframesConfig {
 
+
+    //TODO: Add Spacer Configuration for Unitframes, Column configuration and FaceShow
 
     @Config.Comment({
             "Change the X position of the origin point for the party frames",
@@ -37,5 +40,21 @@ public class PartyframesConfig {
     })
     @RangeInt(min=-5000, max=5000)
     public static int PartyframesYOffset = -1;
+
+    @Config.Comment({
+            "Set the Maximum Players per Column",
+            "Note the maximum is way higher then the theoretical max party size (19)"
+    })
+    @RangeInt(min=1, max=30)
+    public static int MaxPlayersPerColumn = 5;
+
+    @Config.Comment({
+            "Set the Distance separation between Columns (Not Implemented)"
+    })
+    public static int ColumnSpace = 1000;
+    @Config.Comment({
+            "Enable Total Combat Level Display"
+    })
+    public static boolean TotalLevel = true;
 
 }
