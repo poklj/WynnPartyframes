@@ -1,5 +1,7 @@
 package com.wynnpartyframes.partyframes;
 
+import me.bed0.jWynn.WynncraftAPI;
+import me.bed0.jWynn.api.v2.player.WynncraftPlayer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.common.MinecraftForge;
@@ -26,7 +28,8 @@ public class Partyframes {
     public static final String MODID = "wynnpartyframes";
     public static final String NAME = "Wynn Partyframes";
     public static final String VERSION = "1.1.1";
-
+    public static final WynncraftAPI api = new WynncraftAPI();
+    public static final asyncAPI AsyncAPI_Player = new asyncAPI();
 
     public static Logger logger;
     public static KeyBinding[] keyBindings;

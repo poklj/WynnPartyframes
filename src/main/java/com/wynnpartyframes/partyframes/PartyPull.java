@@ -1,5 +1,6 @@
 package com.wynnpartyframes.partyframes;
 
+import me.bed0.jWynn.WynncraftAPI;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiPlayerTabOverlay;
@@ -25,6 +26,7 @@ public class PartyPull {
         List<String> PartyList = new ArrayList<>();
 
         List<EntityPlayer> PartyEntities = new ArrayList<>();
+
         //Get Taboverlay
         final NetHandlerPlayClient netHandlerPlayClient = mc.getConnection();
         if (netHandlerPlayClient != null) {
