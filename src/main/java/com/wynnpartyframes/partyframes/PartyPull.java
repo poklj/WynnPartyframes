@@ -53,9 +53,8 @@ public class PartyPull {
         }
 
         //Spawn the GUI
-        try{
-            new PartyGui(mc, PartyList);
-        } catch (Exception e){}
+        new PartyGui(mc, PartyList);
+
 
     }
 }

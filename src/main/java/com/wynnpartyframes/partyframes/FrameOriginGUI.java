@@ -19,7 +19,7 @@ public class FrameOriginGUI {
      * @param y Origin Y position
      */
     public FrameOriginGUI(Minecraft mc, EntityPlayer player, String playerName, int x, int y){
-        new PlayerNameGUI(mc,playerName, x, y);
+        new PlayerNameGUI(mc,playerName, player,x, y);
         new HealthBarGUI(mc, player, x, y+10);
         //Todo: figure out how to make this optional
         new HealthPercentageGUI(mc, player, x, y+10);

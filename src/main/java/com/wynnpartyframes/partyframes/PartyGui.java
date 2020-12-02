@@ -41,9 +41,10 @@ public class PartyGui extends Gui {
         int Current_column = 0;
         for(int i = 0; i < PartyList.size(); i++) {
             //TODO: Add Columns to support the theoretical max party size of
-                if(PartyframesConfig.MaxPlayersPerColumn % i == 0){
 
-                }
+//                if(PartyframesConfig.MaxPlayersPerColumn % i == 0){
+//
+//                }
             new FrameOriginGUI(mc, PartyEntities.get(i), PartyList.get(i), (width / (PartyframesConfig.PartyframesX)) + PartyframesConfig.PartyframesXOffset, ((height / PartyframesConfig.PartyframesY)+ PartyframesConfig.PartyframesYOffset) + (row * 22));
             row++;
         }

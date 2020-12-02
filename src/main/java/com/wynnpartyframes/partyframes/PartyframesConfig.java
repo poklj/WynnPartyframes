@@ -53,8 +53,8 @@ public class PartyframesConfig {
     })
     public static int ColumnSpace = 1000;
     @Config.Comment({
-            "Enable Total Combat Level Display"
+            "Enable  Combat Level Display"
     })
-    public static boolean TotalLevel = true;
+    public static boolean ShowLevel = true;
 
 }
