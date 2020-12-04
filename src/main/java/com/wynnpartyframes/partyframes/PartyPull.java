@@ -18,9 +18,9 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public class PartyPull {
+class PartyPull {
 
-    public PartyPull(Minecraft mc){
+    PartyPull(Minecraft mc){
 
         List<String> PlayerList = null;
         List<String> PartyList = new ArrayList<>();
@@ -54,7 +54,5 @@ public class PartyPull {
 
         //Spawn the GUI
         new PartyGui(mc, PartyList);
-
-
     }
 }

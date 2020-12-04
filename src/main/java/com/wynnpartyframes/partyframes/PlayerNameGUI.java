@@ -17,9 +17,13 @@ class PlayerNameGUI extends Gui {
         String DisplayString = "";
         //Toggle if you should display total levels.
         if(PartyframesConfig.ShowLevel){
+            if(player != null) {
                 DisplayString += player.experienceLevel + " | ";
+            } else {
+                DisplayString += "* | ";
+            }
         }
         DisplayString += playerName;
-        drawString(mc.fontRenderer, DisplayString,x, y, Integer.parseInt("FFFFFF", 16));
+        drawString(mc.fontRenderer, DisplayString, x, y, Integer.parseInt("FFFFFF", 16));
     }
 }

@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class DebugGUI extends Gui {
-
+    //TODO: update this to be more useful later on
     public DebugGUI(Minecraft mc){
         /*
         Create resolution scaler
