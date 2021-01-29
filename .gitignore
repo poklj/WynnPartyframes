@@ -4,3 +4,16 @@
 build
 run
 gradle/wrapper
+/config/forge.cfg
+/config/forgeChunkLoading.cfg
+/config/splash.properties
+/config/wynnpartyframes.cfg
+/config/WynnPartyframesConfig.cfg
+/crash-reports/crash-2021-01-28_21.27.05-client.txt
+/logs/2021-01-28-1.log.gz
+/logs/debug.log
+/logs/debug-1.log.gz
+/logs/latest.log
+/options.txt
+/servers.dat
+/src/main/resources/rebel.xml
